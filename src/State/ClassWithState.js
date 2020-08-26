@@ -6,6 +6,7 @@ class ClassWithState extends Component {
      
      this.state={
        count:0,
+       
      }
    this.list=[
      {name:"syed",id:5},
@@ -17,9 +18,11 @@ class ClassWithState extends Component {
 
 handleClick(){
    
-  this.setState({
-count:this.state.count+1,
+  this.setState((prevState)=>{
+    console.log(prevState)
+    return prevState.count++
   })
+
 
 }
 
