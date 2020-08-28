@@ -10,6 +10,7 @@ class Todo extends Component {
     };
     this.text = "";
     this.inputRef=React.createRef();
+ 
   }
 
   handleChange = (e) => {
@@ -29,8 +30,6 @@ handleDelete=(index)=>{
   this.setState({
     list:newList
   })
-
-
 }
 
 //life cycle method 
@@ -45,6 +44,7 @@ componentDidMount(){
 
   render() {
     console.log(this.state.list);
+    console.log(this.inputRef)
     return (
       <>
         <input type="text" ref={this.inputRef} onChange={this.handleChange}></input>

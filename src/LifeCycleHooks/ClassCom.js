@@ -5,37 +5,52 @@ class ClassCom extends Component {
     super(props);
 
     this.state = {
-      count2: 2,
+      boolean: false,
+      name:"js",
+      count2:0
+
     };
+    this.set=0;
 
-    console.log("in child  constructor");
+   
   }
 
-  static getDerivedStateFromProps(props, state) {
-    console.log("----------in getDerivedStateFromProps----------------");
-    console.log(props, state);
-    if (props.count == Math.pow(state.count2, 2)) {
-      return { count2: props.count };
-    } else {
-      return null;
-    }
+  componentDidMount(){
+   this.set = setInterval(()=>console.log("Timer "),3000)
   }
 
-  //count =2 count2 = 4
-  componentDidMount() {
-    console.log("------componentDIDMount------------");
-    //this is place where u make Api calls
-  } //this gets executed for initial render  for first render of child component
+ 
+
+
+
+  componentDidUpdate(prevProps,prevState){
+    console.log("inComponentDidUpdate")
+    console.log(prevProps,prevState);
+
+  }
+  handleClick=()=>{
+    this.setState({
+      count2:this.state.count2+1,
+    })
+  } 
+ 
+componentWillUnmount(){
+  console.log("clear timer")
+ clearInterval(this.set);
+}
+
 
   render() {
     console.log("-----child render---------");
     return (
       <div>
         <h2>Child Component</h2>
-        <h2>Count2 :-{this.state.count2}</h2>
+        <h2>count2:-{this.state.count2}</h2>
+        <button onClick={this.handleClick}>Increment</button>
       </div>
     );
   }
 }
 
 export default ClassCom;
+
