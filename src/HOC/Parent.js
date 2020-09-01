@@ -20,6 +20,7 @@ class  Parent  extends Component {
   
 }
 
+
 render(){
   return (<>
     <Hover handleClick={this.handleClick} state={this.state}></Hover>

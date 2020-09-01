@@ -1,23 +1,16 @@
 import React, { PureComponent } from 'react'
-
-class Counter extends PureComponent {
-  constructor(props) {
-    super(props)
-
-    this.state=this.props.state
-    
-  }
+import UpdateFunction from './UpdateFunction'
+class Hover extends PureComponent {
+  
 
   render() {
   
-    const {handleClick} =this.props
+    const {count,handleClick} =this.props
    
-    console.log("Hover");
-    console.log(this.state.count);
+    
     return (
-      <h2  onMouseOver={handleClick.bind(this)}>Clicked for {this.state.count} times</h2>
+      <h2  onMouseOver={handleClick}>Clicked for {count} times</h2>
     )
   }
 }
-
-export default Counter
+export default UpdateFunction(Hover)

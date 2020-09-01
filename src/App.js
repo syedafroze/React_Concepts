@@ -10,11 +10,16 @@ import ParentClass from "./LifeCycleHooks/ParentClass";
 import LifeCycle from './LifeCycleHooks/LifeCycle'
 import ParentClass2 from './PureComponent/ParentClass'
 import Parent from './HOC/Parent'
+import Counter from './HOC/counter'
+import Hover from './HOC/Hover'
 function App() {
   return (
     <div className="App">
 
-<Parent></Parent>
+<Counter></Counter>
+<Hover></Hover>
+
+{/* <Parent></Parent> */}
 
       {/* <ParentClass></ParentClass>
   <ParentClass></ParentClass>
