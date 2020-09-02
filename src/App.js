@@ -12,12 +12,17 @@ import ParentClass2 from './PureComponent/ParentClass'
 import Parent from './HOC/Parent'
 import Counter from './HOC/counter'
 import Hover from './HOC/Hover'
+import Main from './RenderProps/Main'
 function App() {
   return (
     <div className="App">
 
+    <Main></Main>
+
+
+{/* 
 <Counter></Counter>
-<Hover></Hover>
+<Hover></Hover> */}
 
 {/* <Parent></Parent> */}
 
