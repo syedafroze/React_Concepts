@@ -13,12 +13,17 @@ import Parent from './HOC/Parent'
 import Counter from './HOC/counter'
 import Hover from './HOC/Hover'
 import Main from './RenderProps/Main'
+import ErrorFun1 from './ErrorBoundary/fun1'
+import ApiClass from './Apis/ApiClass'
 function App() {
   return (
     <div className="App">
 
-    <Main></Main>
+<ApiClass></ApiClass>
 
+
+    {/* <Main></Main> */}
+{/* <ErrorFun1></ErrorFun1> */}
 
 {/* 
 <Counter></Counter>
